@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './View.css';
 
 class View extends Component {
@@ -8,8 +9,9 @@ class View extends Component {
   }
 
   render() {
-    const { history } = this.props;
+    const { history, exampleState, } = this.props;
     const { goBack } = history;
+
     return (
       <div>
         <p>An Example app view.</p>
@@ -21,4 +23,8 @@ class View extends Component {
   }
 }
 
-export default View;
+const mapStateToProps = ({ exampleState }) => ({
+  exampleState,
+})
+
+export default connect(mapStateToProps)(View);
