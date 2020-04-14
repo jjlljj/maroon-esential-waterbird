@@ -2,22 +2,11 @@ import React from 'react';
 import './App.css';
 import { Route, Link } from 'react-router-dom';
 
-import View from '../View/View';
-
-function Routes() {
-  return (
-    <div>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/view" component={View} />
-    </div>
-  );
-}
+import Board from '../Board/Board';
 
 function App() {
   return (
-    <div className="App">
-      <Routes />
-    </div>
+    <Board />
   );
 }
 
@@ -36,7 +25,6 @@ function Home(props) {
           </a>
         </p>
         <p>
-          <Link to="/view">Navigation Link</Link>
         </p>
       </header>
     </div>

@@ -1,0 +1,16 @@
+.board {
+  display: flex;
+  flex: 1;
+  padding: 12.5px;
+}
+
+
+.cardList {
+  flex: 1;
+  margin: 30px 12.5px;
+}
+
+.cardItem {
+  display: flex;
+  justify-content: space-between;
+}
